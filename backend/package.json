@@ -2,11 +2,12 @@
   "name": "mern-ecommerce-app",
   "version": "1.0.0",
   "description": "Just the barebones of an E-commerce in MERN Stack",
-  "main": "index.js",
+  "main": "server.js",
+  "type": "module",
   "scripts": {
-    "start": "node backend/server",
-    "server": "nodemon backend/server",
-    "client": "npm start --prefix frontend",
+    "start": "node server",
+    "server": "nodemon server",
+    "client": "npm start --prefix ../frontend",
     "dev": "concurrently \"npm run server\" \"npm run client\""
   },
   "repository": {
@@ -30,7 +31,8 @@
   "homepage": "https://github.com/hectorlutero/mern-ecommerce#readme",
   "dependencies": {
     "dotenv": "^16.0.0",
-    "express": "^4.17.3"
+    "express": "^4.17.3",
+    "http-proxy-middleware": "^2.0.3"
   },
   "devDependencies": {
     "concurrently": "^7.0.0",
