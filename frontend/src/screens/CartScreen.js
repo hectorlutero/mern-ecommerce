@@ -12,9 +12,9 @@ import {
 import { useDispatch, useSelector } from "react-redux";
 import { Link, useParams, useNavigate, useLocation } from "react-router-dom";
 import Message from "../components/Message";
-import { addToCart } from "../actions/cartActions";
+import { addToCart, removeFromCart } from "../actions/cartActions";
 
-const CartScreen = ({}) => {
+const CartScreen = () => {
   const location = useLocation();
   const params = useParams();
   const navigate = useNavigate();
@@ -34,7 +34,7 @@ const CartScreen = ({}) => {
   }, [dispatch, productId, qty]);
 
   const removeFromCartHandler = id => {
-    console.log(id);
+    dispatch(removeFromCart(id));
   };
 
   const checkoutHandler = () => {
@@ -83,7 +83,7 @@ const CartScreen = ({}) => {
                     <Button
                       type="button"
                       variant="light"
-                      onClick={() => removeFromCartHandler(item.poduct)}
+                      onClick={() => removeFromCartHandler(item.product)}
                     >
                       <i className="fas fa-trash"></i>
                     </Button>
