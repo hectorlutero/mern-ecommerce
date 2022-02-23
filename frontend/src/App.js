@@ -4,7 +4,7 @@ import Footer from "./components/Footer.js";
 import Header from "./components/Header.js";
 import HomeScreen from "./screens/HomeScreen.js";
 import ProductScreen from "./screens/ProductScreen.js";
-import CartScreen from "./screens/CartSreen.js";
+import CartScreen from "./screens/CartScreen.js";
 
 const App = () => {
   return (
